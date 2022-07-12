@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-image: url("images/background.jpg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
 }
@@ -39,3 +39,19 @@ h2{
     font-weight: lighter;
     display: none;
 }
+
+@media screen and (max-width: 1150px) {
+    body{
+        background-size: 150%;
+      
+    }
+    
+      }
+
+      @media screen and (max-width: 770px) {
+        body{
+            background-size: 230%;
+          
+        }
+        
+          }
