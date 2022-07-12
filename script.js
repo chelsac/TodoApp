@@ -23,16 +23,21 @@
     function checkval(bool,i){
         var id="id"+i;
         var boolval='false';
+        var code1="<label class='container'>";
+        var code2;
+        var code3=  "<span class='mark'></span></label>";
         if(bool==true){
             // console.log(`<input type='checkbox' id='id'+${i} checked='true' disabled='true'>`);
-            return `<input type='checkbox' id='id'+${i} checked='true' disabled='true'>`;
+            code2= `<input type='checkbox' id='id'+${i} checked='true' disabled='true'>`;
         }
         else{
-            return `<input type='checkbox' id='id'+${i}   onchange='completetask(this);'>  `;
+            code2= `<input type='checkbox' id='id'+${i}   onchange='completetask(this);'>  `;
         }
         
-
+return code1+code2+code3;
     }
+
+
 
     var count=0;
     

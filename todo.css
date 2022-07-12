@@ -5,3 +5,119 @@
 .float{
     float: right!important;
 }
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    /* border: #000000 1px solid;  */
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  /* Hide the default checkbox */
+  .container input {
+    visibility: hidden;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .mark {
+    border-radius: 5px;
+    border: #000000 2px solid;
+    position: absolute;
+    margin-top: 15px;
+      /*margin: 20%;
+   top: 0;
+    left: 0; */
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+  }
+  
+  .container:hover input ~ .mark {
+    background-color: lightgray;
+  }
+  
+  .container input:checked ~ .mark {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .container input:disabled ~ .mark {
+    background-color: gray;
+  }
+
+  /* Create the mark/indicator (hidden when not checked) */
+  .mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the mark when checked */
+  .container input:checked ~ .mark:after {
+    display: block;
+  }
+  
+  /* Style the mark/indicator */
+  .container .mark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+body{
+background-image: url("images/sticky.jpg");
+}
+  .section{
+    /* background-color: rgb(0, 0, 0); */
+    
+    /* padding:10px 0px 10px 0px; */
+    padding: 10px;
+    margin: 60px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.705); 
+  }
+
+  table, td, th {  
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+
+  
+  
+  table {
+   
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.705); */
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px;
+    text-transform: capitalize;
+    border: black;
+    /* background-color: 	#fff740; */
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr{background-color:rgb(255, 255, 255)}
+  /* tr:nth-child(1n){background-color: 	#daeeff;}
+  tr:nth-child(2n){background-color:#ffe6e6;}
+  tr:nth-child(3n){background-color: #e9c8ff;}
+  tr:nth-child(4n){background-color:	#ffb9f9;}
+  tr:nth-child(5n){background-color: #ffb5b5;} */
+  tr:nth-child(1){
+    
+    height: 70px;
+    background-color: black;
+    color: white;
+  }
+  
