@@ -6,10 +6,10 @@
     xhttp.onreadystatechange=function(){
         if (this.readyState == 4 && this.status == 200) {
            var res = JSON.parse(this.responseText);
-           var out="<table> <tr><th>No.</th><th>Task</th><th>Completed</th></tr>";
+           var out="<table> <tr><th>No.</th><th>Task</th><th>Completed</th></tr><tr class='spacer'><td colspan='100'></td></tr>";
            for(let i=0;i<res.length;i++){
             out +="<tr> <th>"  + res[i].id +"</th>" +"<th>" + res[i].title +"</th>"+"<th> " ;
-            out +=checkval(res[i].completed,i) +"</th>"  +"</tr>";
+            out +=checkval(res[i].completed,i) +"</th>"  +"</tr><tr class='spacer'><td colspan='100'></td></tr>";
            }
            out+="</table>";
            document.getElementById("demo").innerHTML=out;
